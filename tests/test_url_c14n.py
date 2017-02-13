@@ -27,6 +27,7 @@ class URLC14NTests(unittest.TestCase):
 
     def test_remove_default_port(self):
         self.check('http://example.com:80/', 'http://example.com/')
+        self.check('https://example.com:443/', 'https://example.com/')
 
     def test_root_url(self):
         self.check('http://example.com', 'http://example.com/')

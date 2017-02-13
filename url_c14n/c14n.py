@@ -26,6 +26,8 @@ def url_c14n(s):
     # removing the default port
     if scheme == 'http' and netloc.endswith(':80'):
         netloc = netloc[:-3]
+    elif scheme == 'https' and netloc.endswith(':443'):
+        netloc = netloc[:-4]
     # adding trailing / (root path only)
     if not path:
         path = '/'
